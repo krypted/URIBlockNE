@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ga3-a2-iry">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.ttf">
+            <string>FiraSans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Network Permissions Controller-->
+        <scene sceneID="kVM-gf-SRo">
+            <objects>
+                <viewController id="LDb-Fa-bGg" customClass="OBNetworkPermissionsController" customModule="Sift" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Re2-hV-xEb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLZ-oK-NT3" customClass="CustomView" customModule="Sift" customModuleProvider="target">
+                                <rect key="frame" x="20" y="203.5" width="335" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Networking Content Filtering" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6It-Mq-zTv">
+                                        <rect key="frame" x="10" y="63" width="315" height="22"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="18"/>
+                                        <color key="textColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9j7-cI-xE7">
+                                        <rect key="frame" x="143" y="16" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="thumbTintColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="enableNetFilterToggled" destination="LDb-Fa-bGg" eventType="valueChanged" id="Wd9-rV-FO2"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clH-ZW-EdL">
+                                        <rect key="frame" x="10" y="10" width="10.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="22"/>
+                                        <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98979491653058393" green="1" blue="0.99625116729456742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="6It-Mq-zTv" firstAttribute="leading" secondItem="YLZ-oK-NT3" secondAttribute="leading" constant="10" id="6xc-cU-8oc"/>
+                                    <constraint firstAttribute="height" constant="130" id="Aba-k4-Qw7"/>
+                                    <constraint firstItem="9j7-cI-xE7" firstAttribute="centerX" secondItem="YLZ-oK-NT3" secondAttribute="centerX" id="Kit-Ds-02w"/>
+                                    <constraint firstItem="9j7-cI-xE7" firstAttribute="top" secondItem="YLZ-oK-NT3" secondAttribute="top" constant="16" id="MnX-qR-0yj"/>
+                                    <constraint firstItem="6It-Mq-zTv" firstAttribute="top" secondItem="9j7-cI-xE7" secondAttribute="bottom" constant="16" id="RYV-Df-ZNz"/>
+                                    <constraint firstItem="clH-ZW-EdL" firstAttribute="leading" secondItem="YLZ-oK-NT3" secondAttribute="leading" constant="10" id="RfA-LO-6jb"/>
+                                    <constraint firstAttribute="trailing" secondItem="6It-Mq-zTv" secondAttribute="trailing" constant="10" id="flN-s5-3qn"/>
+                                    <constraint firstItem="clH-ZW-EdL" firstAttribute="top" secondItem="YLZ-oK-NT3" secondAttribute="top" constant="10" id="juw-5K-cyb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3ee-8l-nRJ"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YLZ-oK-NT3" firstAttribute="leading" secondItem="3ee-8l-nRJ" secondAttribute="leading" constant="20" id="S7E-iU-Tb9"/>
+                            <constraint firstItem="YLZ-oK-NT3" firstAttribute="centerX" secondItem="3ee-8l-nRJ" secondAttribute="centerX" id="uns-P4-OLk"/>
+                            <constraint firstItem="YLZ-oK-NT3" firstAttribute="bottom" secondItem="3ee-8l-nRJ" secondAttribute="centerY" id="zHt-K7-yZV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t8B-tr-q8o"/>
+                    <connections>
+                        <outlet property="enabledNetSwitch" destination="9j7-cI-xE7" id="2r8-wk-4BD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG4-sN-DWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="524.8875562218891"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Zj-di-zy0">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Ga3-a2-iry" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FeY-Tv-uPj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LDb-Fa-bGg" kind="relationship" relationship="rootViewController" id="Xfn-6u-7Fi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxr-DZ-uoy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646" y="525"/>
+        </scene>
+    </scenes>
+</document>
